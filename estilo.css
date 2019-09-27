@@ -1,0 +1,28 @@
+.no-border{
+    border: 0;
+}
+
+.center{
+    text-align: center;
+    padding: 5px
+}
+
+.titulo{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 15px;
+    color: #2DBB02;
+}
+
+
+/*----- Tabuleiro -----*/
+
+.border-bottom-right{
+    border-bottom: 1px solid #b9b9b9;
+    border-right: 1px solid #b9b9b9;
+}
+
+.div-size{
+    width: 100px;
+    height: 100px;
+}
