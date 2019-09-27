@@ -119,9 +119,13 @@ $(document).ready(function () {
     function winner(pontos) {
         //Verifica vencedor através dos pontos somados;
         if (pontos == 3) {
-            alert('Player 1 venceu!');
+            var name_winner1 = $('#in-name-p1').val();
+            alert(name_winner1 + ' venceu!');
+            $('.play').off();
         } else if (pontos == -3) {
-            alert('Player 2 venceu!');
+            var name_winner2 = $('#in-name-p2').val();
+            alert(name_winner2 + ' venceu!');
+            $('.play').off();
         }
     }
 });
