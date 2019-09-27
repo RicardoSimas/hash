@@ -43,13 +43,11 @@ $(document).ready(function () {
         //Ocultando area do usuário e deixando somente tabuleiro;
         $('#user-area').hide();
         $('#board-area').show();
-
-
-
     });
 
     $('.play').click(function () {
         var campo_clicado = this.id;
+        $('#' + campo_clicado).off();
         play(campo_clicado);
     });
 
