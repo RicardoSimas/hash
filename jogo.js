@@ -79,28 +79,39 @@ $(document).ready(function () {
 
         //Verifica vitoria na horizontal;
         var pontos = 0;
-
         for (var i = 1; i <= 3; i++) {
             pontos += matriz_jogo['a'][i];
         }
-
         winner(pontos);
 
-
         var pontos = 0;
-
         for (var i = 1; i <= 3; i++) {
             pontos += matriz_jogo['b'][i];
         }
-
         winner(pontos);
 
         var pontos = 0;
-
         for (var i = 1; i <= 3; i++) {
             pontos = pontos + matriz_jogo['c'][i];
         }
+        winner(pontos);
 
+        //Verifica se houve vitória na vertical
+        for (var j = 1; j <= 3; j++) {
+            var pontos = 0;
+            pontos += matriz_jogo['a'][j];
+            pontos += matriz_jogo['b'][j];
+            pontos += matriz_jogo['c'][j];
+            winner(pontos);
+        }
+
+        //Verifica se houve vitória na diagonal
+        pontos = 0;
+        pontos = matriz_jogo['a'][1] + matriz_jogo['b'][2] + matriz_jogo['c'][3];
+        winner(pontos);
+
+        pontos = 0;
+        pontos = matriz_jogo['a'][3] + matriz_jogo['b'][2] + matriz_jogo['c'][1];
         winner(pontos);
 
     }
