@@ -23,6 +23,7 @@ $(document).ready(function () {
     //Ocultando area do tabuleiro e deixando somente a do usuário;
     $('#user-area').show();
     $('#board-area').hide();
+    $('#restart').hide();
 
     $('#btn-start').click(function () {
 
@@ -44,13 +45,15 @@ $(document).ready(function () {
         $('#user-area').hide();
         $('#board-area').show();
     });
-
+    
+    //Capturando id do elemento que possui a classe .play;
     $('.play').click(function () {
         var campo_clicado = this.id;
         $('#' + campo_clicado).off();
         play(campo_clicado);
     });
 
+    //Lógica de jogada para cada jogador;
     function play(id) {
         var ponto = 0;
         var icone = '';
@@ -73,6 +76,7 @@ $(document).ready(function () {
         combinations();
     }
 
+    //Verifica combinações de vitórias
     function combinations() {
 
         //Verifica vitoria na horizontal;
@@ -113,17 +117,31 @@ $(document).ready(function () {
         winner(pontos);
 
     }
-
+    //Verifica vencedor através dos pontos somados;
     function winner(pontos) {
-        //Verifica vencedor através dos pontos somados;
+        
         if (pontos == 3) {
             var name_winner1 = $('#in-name-p1').val();
             alert(name_winner1 + ' venceu!');
             $('.play').off();
+            $('#restart').show();
         } else if (pontos == -3) {
             var name_winner2 = $('#in-name-p2').val();
             alert(name_winner2 + ' venceu!');
             $('.play').off();
+            $('#restart').show();
         }
+    
     }
+    //Botão restart;
+    $('#btn-restart').click( function(){
+        window.location.href = 'index.html';
+    });
+
+    $('#btn-start').mouseover( function(){
+        $('#btn-start').attr("src","imagens/play1.png");
+    });
+    $('#btn-start').mouseout( function(){
+        $('#btn-start').attr("src","imagens/play.png");
+    });
 });

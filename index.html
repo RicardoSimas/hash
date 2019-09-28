@@ -22,6 +22,8 @@
 
     <title>Jogo da Velha</title>
 
+    <link rel="icon" href="imagens/favicon.ico">
+
 </head>
 
 <body>
@@ -32,7 +34,7 @@
                     <div id="user-area">
                         <table style="text-align:center;" align="center">
                             <thead>
-                                <th colspan="3" class="titulo">Jogo da Velha</th>
+                                <th colspan="3"><img class="titulo" src="imagens/titulo.png"></th>
                             </thead>
 
                             <tbody>
@@ -40,19 +42,20 @@
                                     <td>
                                         <img src="imagens/velha3.jpg">
                                         <br />
-                                        <input id="in-name-p1" type="text" class="no-border center" 
-                                        placeholder="Digite um nome.." maxlength="10">
+                                        <input id="in-name-p1" type="text" class="no-border center"
+                                            placeholder="Digite um nome.." maxlength="10">
                                     </td>
 
                                     <td style="padding: 0px 50px">
-                                        <img id="btn-start" src="imagens/iniciar.png">
+                                        <button class="btn btn-outline-light"><img id="btn-start"
+                                                src="imagens/play.png"></button>
                                     </td>
 
                                     <td>
                                         <img src="imagens/velha2.jpg">
                                         <br />
-                                        <input id="in-name-p2" type="text" class="no-border center" 
-                                        placeholder="Digite um nome.." maxlength="10">
+                                        <input id="in-name-p2" type="text" class="no-border center"
+                                            placeholder="Digite um nome.." maxlength="10">
                                     </td>
                                 </tr>
                             </tbody>
@@ -72,7 +75,7 @@
                             <span id="out-name-p1"></span>
                         </div>
 
-                        <table id="board" style="display: inline-block;" >
+                        <table id="board" style="display: inline-block;">
                             <tr>
                                 <td>
                                     <div id="a-1" class="border-bottom-right div-size play">
@@ -127,7 +130,7 @@
                                 </td>
                             </tr>
                         </table>
-                        
+
                         <div style="display: inline-block;">
                             <img src="imagens/velha2.jpg" />
                             <br />
@@ -140,11 +143,21 @@
 
             </div>
             <!--Fim Row-->
+            <div id="restart" align="center">
+                <button type="button" class="btn btn-outline-dark" id="btn-restart">Restart</button>
+            </div>
         </div>
         <!--Fim Conteiner-->
 
-
     </div>
+
+    <!-- START FOOTER DARK-->
+    <footer class="navbar footer fixed-bottom">
+        <div class="container">
+        </div>
+    </footer>
+    <!-- START FOOTER DARK-->
+
 
 </body>
 

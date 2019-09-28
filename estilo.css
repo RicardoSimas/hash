@@ -5,6 +5,10 @@
 */
 
 /* =========================== layout ===========================*/
+.titulo{
+    margin-bottom: 50px;
+}
+
 .no-border{
     border: 0;
 }
@@ -14,8 +18,13 @@
     padding: 5px
 }
 
+#hash{
+    margin-top: 40px;
+}
 
-
+#restart{
+    margin-top: 40px;
+}
 
 /*---------------------------- Tabuleiro ----------------------------*/
 
@@ -29,11 +38,18 @@
     height: 100px;
 }
 
+/*---------------------------- Rodapé ----------------------------*/
+
+footer{
+    background: #000;
+    height: 80px;
+}
+
 /* =========================== Tipografia ===========================*/
 
-.titulo{
-    font-size: 30px;
+.font-footer{
+    font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
-    padding-bottom: 15px;
-    color: #2DBB02;
+    color: #b9b9b9;
+    padding-left: 500px; 
 }
