@@ -40,7 +40,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <img src="imagens/velha3.jpg">
+                                        <img src="imagens/velha3.jpg" data-toggle="tooltip" title="Player 1">
                                         <br />
                                         <input id="in-name-p1" type="text" class="no-border center"
                                             placeholder="Digite um nome.." maxlength="10">
@@ -52,7 +52,7 @@
                                     </td>
 
                                     <td>
-                                        <img src="imagens/velha2.jpg">
+                                        <img src="imagens/velha2.jpg"  data-toggle="tooltip" title="Player 2">
                                         <br />
                                         <input id="in-name-p2" type="text" class="no-border center"
                                             placeholder="Digite um nome.." maxlength="10">
@@ -132,7 +132,7 @@
                         </table>
 
                         <div style="display: inline-block;">
-                            <img src="imagens/velha2.jpg" />
+                            <img src="imagens/velha2.jpg"/>
                             <br />
                             <span id="out-name-p2"></span>
                         </div>
@@ -152,13 +152,23 @@
     </div>
 
     <!-- START FOOTER DARK-->
-    <footer class="navbar footer fixed-bottom">
-        <div class="container">
+    <footer class="fixed-bottom">
+        <div class="container" align="center" style="margin-top: 20px">
+            <a class="format-footer" href="https://github.com/RicardoSimas">
+                <img  src="imagens/github.png"/>GitHub</a>
+            <a class="format-footer" href="#">
+                <img  src="imagens/instagram.png"/>Instagram</a>
+            <a class="format-footer" href="#">
+                <img  src="imagens/facebook.png"/>Facebook</a>
         </div>
     </footer>
     <!-- START FOOTER DARK-->
 
-
+    <script type="text/javascript">
+        $( function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
 </body>
 
 </html>

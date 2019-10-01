@@ -116,6 +116,12 @@ $(document).ready(function () {
         pontos = matriz_jogo['a'][3] + matriz_jogo['b'][2] + matriz_jogo['c'][1];
         winner(pontos);
 
+        if (rodada == 9 && pontos != 3 && pontos!= 3){
+            alert('DEU VELHA!');
+            $('.play').off();
+            $('#restart').show();
+        }
+
     }
     //Verifica vencedor através dos pontos somados;
     function winner(pontos) {
@@ -131,8 +137,8 @@ $(document).ready(function () {
             $('.play').off();
             $('#restart').show();
         }
-    
     }
+
     //Botão restart;
     $('#btn-restart').click( function(){
         window.location.href = 'index.html';
