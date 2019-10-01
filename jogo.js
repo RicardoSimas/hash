@@ -129,11 +129,13 @@ $(document).ready(function () {
         if (pontos == 3) {
             var name_winner1 = $('#in-name-p1').val();
             alert(name_winner1 + ' venceu!');
+            $('#winner1').html('<img src="imagens/winner.png"/>');
             $('.play').off();
             $('#restart').show();
         } else if (pontos == -3) {
             var name_winner2 = $('#in-name-p2').val();
             alert(name_winner2 + ' venceu!');
+            $('#winner2').html('<img src="imagens/winner.png"/>');
             $('.play').off();
             $('#restart').show();
         }
